@@ -1,14 +1,19 @@
 package one.digitalinnovation.digionebank
 
-/**
- * Classe abstrata Pessoa
- *
- * Esta classe implementa uma forma abstrata de pessoa
- *
- * @property nome O nome da pessoa
- * @property cpf O cpf da pessoa*/
+class Pessoa {
+    var nome : String = "Leonardo"
+    var cpf : String = "02572655209"
+    private set
 
-abstract class Pessoa (
-    val nome: String,
-    val cpf: String
-)
+    constructor()
+
+    fun pessoaInfo() = "$nome e $cpf"
+
+}
+
+fun main() {
+    val leonardo = Pessoa()
+
+    println(leonardo.pessoaInfo())
+
+}
